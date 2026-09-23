@@ -3,7 +3,7 @@ class SomeModel:  # pylint: disable=too-few-public-methods
         pass
 
     def predict(self, _message: str) -> float:
-        raise NotImplementedError
+        return min((len(_message) - 2) / 16, 1.0)
 
 
 def predict_message_mood(
